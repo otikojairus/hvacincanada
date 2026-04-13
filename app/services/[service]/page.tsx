@@ -81,9 +81,16 @@ export default async function ServiceHubPage({ params }: PageProps) {
           <p className="frost-kicker">{service.seo.focusKeyphrase}</p>
           <h1>
             {service.name}
-            <span>Ontario Hub + City Pages</span>
+            <span>Professional Support Across Ontario</span>
           </h1>
-          <p className="mt-4">{service.shortDescription}</p>
+          <p className="mt-4">
+            {service.shortDescription} We focus on safe operation, reliable performance, and clear recommendations so
+            you can move forward with confidence.
+          </p>
+          <p className="mt-3 text-sm text-[#dbe7ff]">
+            Whether you are dealing with a sudden breakdown or recurring comfort issues, this guide explains how the
+            service works, what our team checks first, and how to get local help quickly.
+          </p>
           <div className="mt-6 flex flex-wrap gap-2">
             <Link href={provincePath} className="frost-btn frost-btn-primary">
               Open Ontario Page
@@ -98,10 +105,10 @@ export default async function ServiceHubPage({ params }: PageProps) {
       <section className="frost-section">
         <div className="frost-container space-y-6">
           <div className="frost-highlight">
-            <h2 className="frost-title text-2xl">How This Service Page Structure Works</h2>
+            <h2 className="frost-title text-2xl">How This Service Helps You</h2>
             <p className="frost-subtitle">
-              1) Ontario page for province intent, 2) city pages for local intent, 3) shared process/FAQ structure for
-              consistency and scalable publishing.
+              Every appointment follows a practical process: identify the root issue, correct what is needed, verify
+              performance, and explain your options in plain language.
             </p>
           </div>
 
@@ -115,8 +122,11 @@ export default async function ServiceHubPage({ params }: PageProps) {
           </div>
 
           <div>
-            <h2 className="frost-title text-2xl">Ontario City Pages For {service.name}</h2>
-            <p className="frost-subtitle">Start with major locations, then scale to additional provinces after indexing.</p>
+            <h2 className="frost-title text-2xl">Find {service.name} Near You</h2>
+            <p className="frost-subtitle">
+              Select your city to view local service details, response guidance, and direct contact options for fast
+              support.
+            </p>
             <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
               {relatedCities.map((location) => (
                 <Link

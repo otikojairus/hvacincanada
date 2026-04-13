@@ -35,19 +35,19 @@ export type ServiceContent = {
 const SERVICE_FAQS: Array<{ q: string; a: string }> = [
   {
     q: "How quickly can HVAC service be scheduled?",
-    a: "Scheduling depends on demand and weather events, but urgent requests are prioritized for same-day or next-available dispatch whenever possible.",
+    a: "Scheduling depends on weather demand and technician availability, but urgent no-heat or no-cooling calls are prioritized for same-day or next-available dispatch whenever possible. When you call, we confirm timing, gather system details, and help you prepare for the visit.",
   },
   {
     q: "Do you support homes and commercial properties?",
-    a: "Yes. Service workflows are set up for houses, condos, offices, retail spaces, and light commercial buildings.",
+    a: "Yes. We support houses, condos, offices, retail units, and light commercial properties. The diagnostic workflow is adjusted to your equipment type, occupancy needs, and operating hours so repairs and recommendations are practical for your space.",
   },
   {
     q: "Can I get documentation for warranty or insurance files?",
-    a: "Yes. Teams can provide service notes, diagnostics summaries, and parts or replacement scope details.",
+    a: "Yes. We can provide service notes, diagnostic summaries, and parts or replacement scope details that are useful for warranty and insurance records. If you need specific documentation formatting, let us know before or during the visit.",
   },
   {
     q: "What if I am not sure whether I need repair or replacement?",
-    a: "A practical recommendation is provided after inspection, based on safety, reliability, parts condition, and expected operating cost.",
+    a: "After inspection, we provide a clear recommendation based on safety, reliability, part condition, repair frequency, and expected operating cost. You will get practical options so you can choose between immediate repair and longer-term replacement with confidence.",
   },
 ];
 

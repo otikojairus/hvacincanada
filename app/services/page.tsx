@@ -37,14 +37,19 @@ export default function ServicesPage() {
 
       <section className="frost-hero frost-section py-14">
         <div className="frost-container relative z-10">
-          <p className="frost-kicker">Service Directory</p>
+          <p className="frost-kicker">Find The Right HVAC Service</p>
           <h1>
-            HVAC Service Hubs
-            <span>Ontario First. Canada Next.</span>
+            HVAC Services For Repairs And Replacements
+            <span>Built Around Real Customer Problems</span>
           </h1>
           <p className="mt-4">
-            Each service hub includes province pages, city pages, metadata-ready structure, and internal links designed
-            for scalable pSEO growth.
+            This page helps you quickly find the service that matches your issue, whether you have no heat, weak
+            cooling, uneven airflow, unusual noise, or rising energy costs. Each service includes what to expect, how
+            issues are diagnosed, and when replacement may be the better long-term option.
+          </p>
+          <p className="mt-3 text-sm text-[#dbe7ff]">
+            If you are not sure which service to choose, call us and we will route you to the right support based on
+            your system type and urgency.
           </p>
           <a href={`tel:${EMERGENCY_PHONE_DISPLAY.replace(/[^0-9]/g, "")}`} className="frost-btn frost-btn-primary mt-6">
             Call {EMERGENCY_PHONE_DISPLAY}
@@ -54,9 +59,10 @@ export default function ServicesPage() {
 
       <section className="frost-section">
         <div className="frost-container">
-          <h2 className="frost-title">All HVAC Pages By Service</h2>
+          <h2 className="frost-title">All HVAC Services</h2>
           <p className="frost-subtitle">
-            Current rollout includes {LOCATION_PAGES.length} Ontario city pages for each service type.
+            Every service page includes Ontario-wide coverage and city-level support details for {LOCATION_PAGES.length}{" "}
+            locations.
           </p>
 
           <div className="frost-grid frost-cards-4 mt-6">

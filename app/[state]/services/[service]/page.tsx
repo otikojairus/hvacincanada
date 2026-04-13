@@ -87,11 +87,16 @@ export default async function StateServicePage({ params }: PageProps) {
           </div>
           <h1 className="mt-4">
             {primaryKeyword}
-            <span>Province Service Page</span>
+            <span>Trusted Local Support Across {stateName}</span>
           </h1>
           <p className="mt-4">
-            This page targets province-level intent and routes users into city-specific {service.name.toLowerCase()} pages
-            where local context and support details are available.
+            If you need {service.name.toLowerCase()} in {stateName}, this page connects you to city-specific help
+            quickly. You will find local service routes, clearer expectations, and direct contact options for urgent
+            and planned work.
+          </p>
+          <p className="mt-3 text-sm text-[#dbe7ff]">
+            We support homeowners and businesses with diagnostic-first service, transparent recommendations, and
+            practical next steps designed to restore comfort safely.
           </p>
           <div className="mt-6">
             <a href={`tel:${EMERGENCY_PHONE_DISPLAY.replace(/[^0-9]/g, "")}`} className="frost-btn frost-btn-primary">
@@ -106,7 +111,8 @@ export default async function StateServicePage({ params }: PageProps) {
           <div className="frost-highlight">
             <h2 className="frost-title text-2xl">Where We Serve In {stateName}</h2>
             <p className="frost-subtitle">
-              Click a city to open its local service page for {service.name.toLowerCase()}.
+              Choose your city to open a detailed local page for {service.name.toLowerCase()}, including service
+              context, process details, and FAQs.
             </p>
           </div>
 

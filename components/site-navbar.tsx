@@ -10,6 +10,7 @@ const phoneHref = `tel:${EMERGENCY_PHONE_DISPLAY.replace(/[^0-9]/g, "")}`;
 export function SiteNavbar() {
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [showMobileCallBar, setShowMobileCallBar] = useState(false);
   const servicesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -45,6 +46,26 @@ export function SiteNavbar() {
     };
   }, []);
 
+  useEffect(() => {
+    const mobileQuery = window.matchMedia("(max-width: 1024px)");
+
+    function onScroll() {
+      const isMobileViewport = mobileQuery.matches;
+      setShowMobileCallBar(isMobileViewport && window.scrollY > 24);
+    }
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    mobileQuery.addEventListener("change", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      mobileQuery.removeEventListener("change", onScroll);
+    };
+  }, []);
+
   return (
     <>
       <header className="frost-header">
@@ -53,16 +74,12 @@ export function SiteNavbar() {
             <span className="frost-logo-mark">H</span>
             <span>
               <strong className="frost-logo">{SITE_NAME}</strong>
-              <small className="frost-logo-sub">Ontario Launch</small>
             </span>
           </Link>
 
           <nav className="frost-nav hidden lg:flex">
             <Link href="/" className="frost-nav-link">
               Home
-            </Link>
-            <Link href="/ontario/services/ac-repair" className="frost-nav-link">
-              Ontario
             </Link>
             <div className="frost-services-wrap" ref={servicesRef}>
               <button
@@ -126,9 +143,6 @@ export function SiteNavbar() {
             <Link href="/services" className="frost-drawer-link" onClick={() => setOpen(false)}>
               All Services
             </Link>
-            <Link href="/ontario/services/ac-repair" className="frost-drawer-link" onClick={() => setOpen(false)}>
-              Ontario AC Repair
-            </Link>
           </div>
 
           <p className="mt-6 text-xs font-semibold uppercase tracking-[0.18em] text-slate-500">Service Hubs</p>
@@ -151,6 +165,12 @@ export function SiteNavbar() {
             Call {EMERGENCY_PHONE_DISPLAY}
           </a>
         </div>
+      </div>
+
+      <div className={`frost-mobile-callbar ${showMobileCallBar ? "frost-mobile-callbar-visible" : ""}`}>
+        <a href={phoneHref} className="frost-mobile-callbar-btn">
+          Call Us Now
+        </a>
       </div>
     </>
   );

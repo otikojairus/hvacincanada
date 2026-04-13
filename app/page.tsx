@@ -70,14 +70,19 @@ export default function HomePage() {
       <section className="frost-hero frost-section">
         <div className="frost-container relative z-10 grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
-            <p className="frost-kicker">Programmatic SEO Launch</p>
+            <p className="frost-kicker">Reliable HVAC Help Across Ontario</p>
             <h1>
               HVAC In Canada
-              <span>Ontario Coverage First</span>
+              <span>Fast Service. Clear Answers. No Guesswork.</span>
             </h1>
             <p className="mt-4">
-              We are launching with Ontario-wide service intent pages first, then expanding province-by-province after
-              indexing performance is confirmed.
+              When your heating or cooling system fails, you need quick support and a plan you can trust. We help
+              homeowners and businesses across Ontario with AC, furnace, heat pump, boiler, and airflow problems using
+              practical diagnostics and clear recommendations.
+            </p>
+            <p className="mt-3 text-sm text-[#dbe7ff]">
+              From urgent breakdowns to planned replacements, our goal is simple: restore comfort safely, explain every
+              step in plain language, and help you make the right decision for your property and budget.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               <a href={`tel:${EMERGENCY_PHONE_DISPLAY.replace(/[^0-9]/g, "")}`} className="frost-btn frost-btn-primary">
@@ -90,13 +95,13 @@ export default function HomePage() {
           </div>
 
           <div className="frost-panel-dark">
-            <p className="frost-chip">Launch Focus</p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight">Service Pages Ready For Ontario</h2>
+            <p className="frost-chip">Why Customers Choose Us</p>
+            <h2 className="mt-3 text-2xl font-semibold tracking-tight">What You Can Expect On Every Visit</h2>
             <ul className="mt-4 grid gap-2 text-sm text-[#d7e2fa]">
-              <li>AC repair Ontario + city variants</li>
-              <li>Furnace, heat pump, mini-split, and boiler pages</li>
-              <li>Core replacement pages for major HVAC components</li>
-              <li>Province-level and city-level internal linking</li>
+              <li>Prompt response for urgent heating and cooling problems</li>
+              <li>Step-by-step diagnostics before any repair recommendation</li>
+              <li>Clear explanation of repair vs. replacement options</li>
+              <li>Service support for homes, condos, and light commercial spaces</li>
             </ul>
           </div>
         </div>
@@ -104,9 +109,10 @@ export default function HomePage() {
 
       <section className="frost-section">
         <div className="frost-container">
-          <h2 className="frost-title">Core Service Hubs</h2>
+          <h2 className="frost-title">Popular HVAC Services</h2>
           <p className="frost-subtitle">
-            Every service has a dedicated hub plus local landing pages for Ontario cities.
+            Explore detailed service pages to understand symptoms, likely causes, and what our team checks first during
+            a visit.
           </p>
           <div className="frost-grid frost-cards-3 mt-6">
             {featuredServices.map((serviceSlug) => {
@@ -126,8 +132,11 @@ export default function HomePage() {
       <section className="frost-section pt-0">
         <div className="frost-container">
           <div className="frost-highlight">
-            <h2 className="frost-title text-2xl">Ontario Cities In Current Rollout</h2>
-            <p className="frost-subtitle">Each city links into AC repair by default, with all services available from the city page.</p>
+            <h2 className="frost-title text-2xl">Local Service In Ontario Cities</h2>
+            <p className="frost-subtitle">
+              Choose your city to see locally relevant service details, practical next steps, and a direct contact path
+              for immediate help.
+            </p>
             <div className="mt-5 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
               {featuredLocations.map((location) => (
                 <Link

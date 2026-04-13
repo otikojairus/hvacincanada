@@ -432,13 +432,56 @@ a {
   font-weight: 600;
 }
 
+.frost-mobile-callbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 120;
+  padding: 0.65rem 0.8rem calc(0.65rem + env(safe-area-inset-bottom));
+  background: linear-gradient(180deg, rgba(8, 17, 33, 0.2), rgba(8, 17, 33, 0.85));
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.frost-mobile-callbar-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.frost-mobile-callbar-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(640px, 100%);
+  margin: 0 auto;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: linear-gradient(135deg, #ffae6d 0%, var(--accent) 100%);
+  color: #241104;
+  box-shadow: 0 12px 30px rgba(255, 122, 24, 0.45);
+  font-family: var(--font-space), sans-serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 0.82rem 0.95rem;
+}
+
 @media (max-width: 1140px) {
   .frost-cards-4 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
+  body {
+    padding-bottom: 4.4rem;
+  }
+
   .frost-section {
     padding: 64px 0;
   }
@@ -450,5 +493,11 @@ a {
 
   .frost-container {
     width: min(1280px, 100% - 1.2rem);
+  }
+}
+
+@media (min-width: 1025px) {
+  .frost-mobile-callbar {
+    display: none;
   }
 }
