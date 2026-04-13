@@ -2,8 +2,10 @@ import type { MetadataRoute } from "next";
 import { LOCATION_PAGES, SERVICE_ORDER, getStates } from "@/lib/hvac-data";
 import { getSiteUrl } from "@/lib/seo";
 
+export const revalidate = 3600;
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = getSiteUrl();
+  const siteUrl = getSiteUrl().replace(/\/+$/, "");
   const now = new Date();
 
   const baseRoutes: MetadataRoute.Sitemap = [
@@ -46,5 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   );
 
-  return [...baseRoutes, ...serviceHubs, ...provinceRoutes, ...locationRoutes];
+  const allRoutes = [...baseRoutes, ...serviceHubs, ...provinceRoutes, ...locationRoutes];
+  const deduped = new Map<string, MetadataRoute.Sitemap[number]>();
+
+  for (const route of allRoutes) {
+    deduped.set(route.url, route);
+  }
+
+  return [...deduped.values()];
 }

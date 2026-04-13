@@ -95,7 +95,7 @@ export default function HomePage() {
           </div>
 
           <div className="frost-panel-dark">
-            <p className="frost-chip">Why Customers Choose Us</p>
+            <p className="frost-chip frost-chip-dark">Why Customers Choose Us</p>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight">What You Can Expect On Every Visit</h2>
             <ul className="mt-4 grid gap-2 text-sm text-[#d7e2fa]">
               <li>Prompt response for urgent heating and cooling problems</li>

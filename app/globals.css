@@ -364,6 +364,12 @@ a {
   padding: 0.35rem 0.62rem;
 }
 
+.frost-chip-dark {
+  border-color: #3b619d;
+  background: #11284d;
+  color: #d7e7ff;
+}
+
 .frost-divider {
   height: 1px;
   width: 100%;
