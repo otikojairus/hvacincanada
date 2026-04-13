@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SERVICE_ORDER, SERVICES } from "@/lib/hvac-data";
 import { EMERGENCY_PHONE_DISPLAY, SITE_NAME } from "@/lib/seo";
@@ -10,7 +11,10 @@ export function SiteFooter() {
       <div className="frost-container py-14">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <p className="frost-footer-title">{SITE_NAME}</p>
+            <div className="frost-footer-brand">
+              <Image src="/hvacincanada-logo.png" alt={`${SITE_NAME} logo`} width={44} height={44} className="frost-logo-mark" />
+              <p className="frost-footer-title">{SITE_NAME}</p>
+            </div>
             <p className="mt-3 text-sm text-slate-300">
               Ontario-first HVAC response pages built for service intent, local relevance, and conversion-ready CTAs.
             </p>

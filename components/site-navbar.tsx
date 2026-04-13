@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { SERVICE_ORDER, SERVICES } from "@/lib/hvac-data";
@@ -71,7 +72,14 @@ export function SiteNavbar() {
       <header className="frost-header">
         <div className="frost-container frost-nav-shell">
           <Link href="/" className="frost-logo-block" onClick={() => setOpen(false)}>
-            <span className="frost-logo-mark">H</span>
+            <Image
+              src="/hvacincanada-logo.png"
+              alt={`${SITE_NAME} logo`}
+              width={36}
+              height={36}
+              className="frost-logo-mark"
+              priority
+            />
             <span>
               <strong className="frost-logo">{SITE_NAME}</strong>
             </span>

@@ -108,14 +108,10 @@ a {
   width: 1.85rem;
   height: 1.85rem;
   border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-space), sans-serif;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: #1f1308;
-  background: linear-gradient(145deg, #ffbf8f 0%, #ff7a18 100%);
+  object-fit: cover;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #111827;
 }
 
 .frost-logo {
@@ -389,6 +385,12 @@ a {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   font-size: 0.86rem;
+}
+
+.frost-footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
 .frost-drawer {
