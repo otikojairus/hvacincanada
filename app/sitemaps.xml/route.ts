@@ -13,7 +13,7 @@ function escapeXml(value: string) {
 }
 
 export function GET() {
-  const siteUrl = getSiteUrl().replace(/\/+$/, "");
+  const siteUrl = getSiteUrl().replace(/\/+$/, "").replace(/\.ca(?=\/|$)/, ".com");
   const nowIso = new Date().toISOString();
 
   const urls = new Set<string>([

@@ -5,7 +5,7 @@ import { getSiteUrl } from "@/lib/seo";
 export const revalidate = 3600;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const siteUrl = getSiteUrl().replace(/\/+$/, "");
+  const siteUrl = getSiteUrl().replace(/\/+$/, "").replace(/\.ca(?=\/|$)/, ".com");
   const now = new Date();
 
   const baseRoutes: MetadataRoute.Sitemap = [
@@ -26,8 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceHubs: MetadataRoute.Sitemap = SERVICE_ORDER.map((service) => ({
     url: `${siteUrl}/services/${service}`,
     lastModified: now,
-    changeFrequency: "weekly",
-    priority: service === "ac-repair" ? 0.93 : 0.83,
+    ...(service === "ac-repair" ? { changeFrequency: "weekly" as const, priority: 0.93 } : {}),
   }));
 
   const provinceRoutes: MetadataRoute.Sitemap = getStates().flatMap((state) =>
