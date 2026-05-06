@@ -3,6 +3,7 @@ export type ServiceSlug =
   | "furnace-repair"
   | "heat-pump-repair"
   | "mini-split-repair"
+  | "oil-furnace-repair-replacement"
   | "boiler-repair"
   | "ductwork-repair"
   | "thermostat-repair"
@@ -130,6 +131,33 @@ export const SERVICES: Record<ServiceSlug, ServiceContent> = {
     seo: {
       focusKeyphrase: "mini-split repair",
       relatedTerms: ["ductless ac repair", "ductless heat pump repair", "mini split service", "split unit repair"],
+    },
+  },
+  "oil-furnace-repair-replacement": {
+    slug: "oil-furnace-repair-replacement",
+    name: "Oil Furnace Repair and Replacement",
+    navLabel: "Oil Furnace",
+    shortDescription:
+      "Oil furnace repair and replacement for burner faults, delayed ignition, soot concerns, and aging heating systems.",
+    emergencyLine: "+1 866-907-4822",
+    heroPrimary: "Oil Furnace Repair and Replacement",
+    heroSecondary:
+      "Get fast diagnostics and clear repair-versus-replacement guidance for safe, reliable winter heating.",
+    processSteps: [
+      "Combustion safety and burner diagnostics",
+      "Fuel delivery and ignition performance checks",
+      "Repair actions or replacement planning",
+      "Startup verification and heat output confirmation",
+    ],
+    faqs: SERVICE_FAQS,
+    seo: {
+      focusKeyphrase: "oil furnace repair",
+      relatedTerms: [
+        "oil furnace replacement",
+        "oil burner repair",
+        "oil heating system replacement",
+        "emergency oil furnace service",
+      ],
     },
   },
   "boiler-repair": {
@@ -379,6 +407,7 @@ export const SERVICE_ORDER: ServiceSlug[] = [
   "furnace-repair",
   "heat-pump-repair",
   "mini-split-repair",
+  "oil-furnace-repair-replacement",
   "boiler-repair",
   "ductwork-repair",
   "thermostat-repair",

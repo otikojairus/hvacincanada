@@ -72,6 +72,44 @@ const SERVICE_CONTENT_BLOCKS: Partial<
       "Address odd sounds or longer run cycles early to avoid major failures.",
     ],
   },
+  "oil-furnace-repair-replacement": {
+    intro: [
+      "Oil furnace problems in Toronto usually show up as delayed startup, weak heat output, unusual burner noise, soot around vents, or repeated reset trips. These signs can point to combustion, fuel delivery, or control issues that need careful inspection.",
+      "For many homes, the right answer is not always immediate replacement. A proper oil furnace service visit should confirm safety first, isolate the root issue, and then compare practical repair options against replacement when reliability or efficiency is declining.",
+      "This page is built to support both intents in one place: oil furnace repair when your system is still a good candidate for restoration, and oil furnace replacement when age, safety concerns, or repeat failures make upgrading the smarter path.",
+    ],
+    problemsSolved: [
+      "Oil furnace not starting or failing to stay lit",
+      "Delayed ignition, rumbling starts, or strong fuel odors",
+      "Weak airflow or rooms that stay cold during winter peaks",
+      "Soot buildup, smoke concerns, or poor combustion performance",
+      "Repeated lockouts, reset button trips, or control faults",
+      "Noisy burners, blower issues, or unstable heat cycles",
+      "Older equipment with rising repair frequency and operating cost",
+      "Planning replacement for end-of-life oil heating systems",
+    ],
+    visitIncludes: [
+      "Combustion and venting safety checks",
+      "Burner, nozzle, filter, and ignition-sequence diagnostics",
+      "Fuel delivery and control system testing",
+      "Targeted repairs with post-repair startup verification",
+      "Repair-versus-replacement guidance based on system condition",
+      "Replacement scope planning when upgrade is the better option",
+      "Clear summary of next steps for safe, dependable heating",
+    ],
+    localUseCases: [
+      "Homes with aging oil furnaces needing reliable winter performance",
+      "Properties seeing repeated burner service calls each season",
+      "Owners comparing short-term repair value against full replacement",
+      "Landlords needing documented oil heating service actions",
+    ],
+    maintenanceTips: [
+      "Schedule annual oil furnace service before cold-weather demand.",
+      "Replace oil filters and inspect nozzles at recommended intervals.",
+      "Address soot, fuel odor, or delayed ignition immediately.",
+      "Plan replacement early when repairs become frequent or costly.",
+    ],
+  },
 };
 
 export const revalidate = 86400;
